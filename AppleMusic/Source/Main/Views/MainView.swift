@@ -12,7 +12,8 @@ struct MainView: View {
         TabView {
             MedialibraryView()
                 .tabItem {
-                    Image(systemName: "square.stack.fill")
+                    Image("library")
+                        .renderingMode(.template)
                     Text("Медиатека")
                 }
 
