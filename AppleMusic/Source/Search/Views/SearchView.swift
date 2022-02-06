@@ -9,11 +9,15 @@ import SwiftUI
 
 struct SearchView: View {
     var body: some View {
-        NavigationView {
-            Text("Поиск")
-                .navigationTitle("Поиск")
+        ZStack {
+            NavigationView {
+                Text("Поиск")
+                    .navigationTitle("Поиск")
+            }
+            .navigationViewStyle(.stack)
+
+            MediaPlayerView()
         }
-        .navigationViewStyle(.stack)
     }
 }
 

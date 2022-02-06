@@ -9,11 +9,15 @@ import SwiftUI
 
 struct RadioView: View {
     var body: some View {
-        NavigationView {
-            Text("Радио")
-                .navigationTitle("Радио")
+        ZStack {
+            NavigationView {
+                Text("Радио")
+                    .navigationTitle("Радио")
+            }
+            .navigationViewStyle(.stack)
+
+            MediaPlayerView()
         }
-        .navigationViewStyle(.stack)
 
     }
 }
