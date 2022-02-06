@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1001,
+        "name": "Плейлисты",
+        "iconName": "music.note.list",
+        "isChosen": true,
+    },
+    {
+        "id": 1002,
+        "name": "Артисты",
+        "iconName": "music.mic",
+        "isChosen": true,
+    },
+    {
+        "id": 1003,
+        "name": "Альбомы",
+        "iconName": "square.stack",
+        "isChosen": true,
+    },
+    {
+        "id": 1004,
+        "name": "Песни",
+        "iconName": "music.note",
+        "isChosen": true,
+    },
+    {
+        "id": 1005,
+        "name": "Телешоу и фильмы",
+        "iconName": "tv",
+        "isChosen": false,
+    },
+    {
+        "id": 1006,
+        "name": "Видеоклипы",
+        "iconName": "music.note.tv",
+        "isChosen": false,
+    },
+    {
+        "id": 1007,
+        "name": "Жанры",
+        "iconName": "guitars",
+        "isChosen": true,
+    },
+    {
+        "id": 1008,
+        "name": "Сборники",
+        "iconName": "person.2.crop.square.stack",
+        "isChosen": false,
+    },
+    {
+        "id": 1009,
+        "name": "Авторы",
+        "iconName": "music.quarternote.3",
+        "isChosen": true,
+    },
+    {
+        "id": 1010,
+        "name": "Загружено",
+        "iconName": "arrow.down.circle",
+        "isChosen": false,
+    },
+    {
+        "id": 1010,
+        "name": "Домашняя коллекция",
+        "iconName": "music.note.house",
+        "isChosen": false,
+    }
+]

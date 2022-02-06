@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct Medialibrary: Hashable, Codable, Identifiable {
+    var id: Int
+    var name: String
+    var iconName: String
+    var isChosen: Bool
+}
