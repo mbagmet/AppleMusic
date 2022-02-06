@@ -9,22 +9,28 @@ import SwiftUI
 
 struct MedialibraryView: View {
     var body: some View {
-        NavigationView {
-            VStack(spacing: 5) {
-                Text("Ищете свою музыку?")
-                    .font(.title)
-                    .fontWeight(.bold)
+        ZStack {
+            NavigationView {
+                VStack(spacing: 5) {
+                    Text("Ищете свою музыку?")
+                        .font(.title)
+                        .fontWeight(.bold)
 
-                Text("Здесь появится купленная Вами в \n iTunes Store музыка.")
-                    .font(.title2)
-                    .foregroundColor(.secondary)
-                    .multilineTextAlignment(.center)
+                    Text("Здесь появится купленная Вами в \n iTunes Store музыка.")
+                        .font(.title2)
+                        .foregroundColor(.secondary)
+                        .multilineTextAlignment(.center)
+
+                    Spacer()
+                        .frame(height: 70)
+                }
+                .navigationTitle("Медиатека")
+                .navigationBarItems(trailing: NavigationLink("Править", destination: RadioView()))
             }
-            .navigationTitle("Медиатека")
-            .navigationBarItems(trailing: NavigationLink("Править", destination: RadioView()))
-        }
-        .navigationViewStyle(.stack)
+            .navigationViewStyle(.stack)
 
+            MediaPlayerView()
+        }
     }
 }
 
