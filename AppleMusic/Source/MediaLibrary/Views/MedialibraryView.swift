@@ -13,21 +13,11 @@ struct MedialibraryView: View {
     var body: some View {
         ZStack {
             NavigationView {
-                VStack(spacing: 5) {
+                VStack {
                     if isEditMode {
                         MedialibraryListView()
                     } else {
-                        Text("Ищете свою музыку?")
-                            .font(.title)
-                            .fontWeight(.bold)
-
-                        Text("Здесь появится купленная Вами в \n iTunes Store музыка.")
-                            .font(.title2)
-                            .foregroundColor(.secondary)
-                            .multilineTextAlignment(.center)
-
-                        Spacer()
-                            .frame(height: 70)
+                        MedialibraryStartView()
                     }
                 }
                 .navigationTitle("Медиатека")

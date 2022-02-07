@@ -12,6 +12,7 @@
 		794950EB27ADB805002D868E /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794950EA27ADB805002D868E /* RadioView.swift */; };
 		794950EF27ADD56E002D868E /* MediaPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794950EE27ADD56E002D868E /* MediaPlayerView.swift */; };
 		794950F127ADDFF9002D868E /* AlbumImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794950F027ADDFF9002D868E /* AlbumImage.swift */; };
+		794B34EC27B1B91C000296B1 /* MedialibraryStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794B34EB27B1B91C000296B1 /* MedialibraryStartView.swift */; };
 		79810D4F27B15898001A5C06 /* MedialibraryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79810D4E27B15898001A5C06 /* MedialibraryRowView.swift */; };
 		798DAB0527AFCB240047FFD6 /* PlayerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798DAB0427AFCB240047FFD6 /* PlayerButton.swift */; };
 		79992F3E27AD91B8000760F3 /* AppleMusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79992F3D27AD91B8000760F3 /* AppleMusicApp.swift */; };
@@ -30,6 +31,7 @@
 		794950EA27ADB805002D868E /* RadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
 		794950EE27ADD56E002D868E /* MediaPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerView.swift; sourceTree = "<group>"; };
 		794950F027ADDFF9002D868E /* AlbumImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumImage.swift; sourceTree = "<group>"; };
+		794B34EB27B1B91C000296B1 /* MedialibraryStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedialibraryStartView.swift; sourceTree = "<group>"; };
 		79810D4E27B15898001A5C06 /* MedialibraryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedialibraryRowView.swift; sourceTree = "<group>"; };
 		798DAB0427AFCB240047FFD6 /* PlayerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerButton.swift; sourceTree = "<group>"; };
 		79992F3A27AD91B8000760F3 /* AppleMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				794950E227ADB788002D868E /* MedialibraryView.swift */,
+				794B34EB27B1B91C000296B1 /* MedialibraryStartView.swift */,
 				79D54F8227AFDFF60017CCE2 /* MedialibraryListView.swift */,
 				79810D4E27B15898001A5C06 /* MedialibraryRowView.swift */,
 			);
@@ -291,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				794B34EC27B1B91C000296B1 /* MedialibraryStartView.swift in Sources */,
 				79810D4F27B15898001A5C06 /* MedialibraryRowView.swift in Sources */,
 				79D54F7D27AFD5600017CCE2 /* Medialibrary.swift in Sources */,
 				794950E927ADB7EF002D868E /* SearchView.swift in Sources */,
