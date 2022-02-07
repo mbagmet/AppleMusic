@@ -8,24 +8,35 @@
 import SwiftUI
 
 struct MedialibraryView: View {
+    @State var isEditMode = false
+
     var body: some View {
         ZStack {
             NavigationView {
                 VStack(spacing: 5) {
-                    Text("Ищете свою музыку?")
-                        .font(.title)
-                        .fontWeight(.bold)
+                    if isEditMode {
+                        MedialibraryListView()
+                    } else {
+                        Text("Ищете свою музыку?")
+                            .font(.title)
+                            .fontWeight(.bold)
 
-                    Text("Здесь появится купленная Вами в \n iTunes Store музыка.")
-                        .font(.title2)
-                        .foregroundColor(.secondary)
-                        .multilineTextAlignment(.center)
+                        Text("Здесь появится купленная Вами в \n iTunes Store музыка.")
+                            .font(.title2)
+                            .foregroundColor(.secondary)
+                            .multilineTextAlignment(.center)
 
-                    Spacer()
-                        .frame(height: 70)
+                        Spacer()
+                            .frame(height: 70)
+                    }
                 }
                 .navigationTitle("Медиатека")
-                .navigationBarItems(trailing: NavigationLink("Править", destination: RadioView()))
+                .navigationBarItems(
+                    trailing: Button(action: {
+                        isEditMode.toggle()
+                    }, label: {
+                        Text(isEditMode ? "Готово" : "Править")
+                    }))
             }
             .navigationViewStyle(.stack)
 
@@ -37,5 +48,6 @@ struct MedialibraryView: View {
 struct MedialibraryView_Previews: PreviewProvider {
     static var previews: some View {
         MedialibraryView()
+            .environmentObject(ModelData())
     }
 }
