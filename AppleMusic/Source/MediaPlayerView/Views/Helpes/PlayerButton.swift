@@ -12,7 +12,7 @@ struct PlayerButton: View {
 
     var body: some View {
         Button {
-            // TODO
+
         } label: {
             Image(systemName: iconName)
                 .resizable()

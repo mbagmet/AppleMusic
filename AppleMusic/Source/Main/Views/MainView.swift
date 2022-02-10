@@ -29,7 +29,6 @@ struct MainView: View {
                     Text("Поиск")
                 }
         }
-        .accentColor(Color(#colorLiteral(red: 0.9918584228, green: 0.2413797379, blue: 0.2938711345, alpha: 1)))
     }
 }
 
