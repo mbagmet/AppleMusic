@@ -15,11 +15,12 @@ struct AlbumImage: View {
             .frame(width: 44, height: 44)
             .opacity(0.6)
             .background(
-                Color.init(#colorLiteral(red: 0.7079379392, green: 0.7601017874, blue: 0.7601017874, alpha: 0.15))
+                Color("albumGrayBackground")
+                    .opacity(0.15)
                     .clipShape(RoundedRectangle(cornerRadius: 5))
                     .overlay(
                         RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color(#colorLiteral(red: 0.5840483093, green: 0.6270834478, blue: 0.6270834478, alpha: 0.2)), lineWidth: 1)
+                            .stroke(Color("albumGrayStroke").opacity(0.2), lineWidth: 1)
                     )
             )
     }
