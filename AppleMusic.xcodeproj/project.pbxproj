@@ -19,6 +19,8 @@
 		79992F4027AD91B8000760F3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79992F3F27AD91B8000760F3 /* MainView.swift */; };
 		79992F4227AD91BA000760F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79992F4127AD91BA000760F3 /* Assets.xcassets */; };
 		79992F4527AD91BA000760F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79992F4427AD91BA000760F3 /* Preview Assets.xcassets */; };
+		79BE7C8127B5AE9D003D7B01 /* RadioSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BE7C8027B5AE9D003D7B01 /* RadioSectionView.swift */; };
+		79BE7C8327B5AEB5003D7B01 /* StationsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BE7C8227B5AEB5003D7B01 /* StationsSectionView.swift */; };
 		79D54F7D27AFD5600017CCE2 /* Medialibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D54F7C27AFD5600017CCE2 /* Medialibrary.swift */; };
 		79D54F7F27AFD6970017CCE2 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D54F7E27AFD6970017CCE2 /* ModelData.swift */; };
 		79D54F8127AFDCA60017CCE2 /* MedialibraryData.json in Resources */ = {isa = PBXBuildFile; fileRef = 79D54F8027AFDCA60017CCE2 /* MedialibraryData.json */; };
@@ -39,6 +41,8 @@
 		79992F3F27AD91B8000760F3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		79992F4127AD91BA000760F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79992F4427AD91BA000760F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		79BE7C8027B5AE9D003D7B01 /* RadioSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioSectionView.swift; sourceTree = "<group>"; };
+		79BE7C8227B5AEB5003D7B01 /* StationsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsSectionView.swift; sourceTree = "<group>"; };
 		79D54F7C27AFD5600017CCE2 /* Medialibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medialibrary.swift; sourceTree = "<group>"; };
 		79D54F7E27AFD6970017CCE2 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		79D54F8027AFDCA60017CCE2 /* MedialibraryData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MedialibraryData.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
@@ -150,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				794950EA27ADB805002D868E /* RadioView.swift */,
+				79BE7C8027B5AE9D003D7B01 /* RadioSectionView.swift */,
+				79BE7C8227B5AEB5003D7B01 /* StationsSectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,6 +308,8 @@
 				79992F3E27AD91B8000760F3 /* AppleMusicApp.swift in Sources */,
 				794950E327ADB788002D868E /* MedialibraryView.swift in Sources */,
 				794950F127ADDFF9002D868E /* AlbumImage.swift in Sources */,
+				79BE7C8127B5AE9D003D7B01 /* RadioSectionView.swift in Sources */,
+				79BE7C8327B5AEB5003D7B01 /* StationsSectionView.swift in Sources */,
 				794950EF27ADD56E002D868E /* MediaPlayerView.swift in Sources */,
 				79D54F7F27AFD6970017CCE2 /* ModelData.swift in Sources */,
 				79D54F8327AFDFF60017CCE2 /* MedialibraryListView.swift in Sources */,
