@@ -14,7 +14,7 @@ struct RadioView: View {
                 GeometryReader { geometry in
                     ScrollView(.vertical, showsIndicators: true) {
                         RadioSectionView(geometry: geometry)
-                        StationsSectionView(geometry: geometry)
+                        StationsSectionView()
                     }
                 }
                 .navigationTitle("Радио")

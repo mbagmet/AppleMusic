@@ -20,7 +20,7 @@ struct RadioSectionView: View {
             LazyHGrid(rows: rows) {
                 ForEach(0..<10) { index in
                     Rectangle()
-                        .frame(width: geometry.size.width - 32)
+                        .frame(width: geometry.size.width * 0.92)
                         .foregroundColor(.yellow)
                 }
             }
