@@ -12,16 +12,16 @@ struct RadioSectionView: View {
     var geometry: GeometryProxy
 
     let rows = [
-        GridItem(.fixed(390))
+        GridItem(.fixed(320))
     ]
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHGrid(rows: rows) {
                 ForEach(0..<10) { index in
-                    Rectangle()
+                    RadioCellView(geometry: geometry)
                         .frame(width: geometry.size.width * 0.92)
-                        .foregroundColor(.yellow)
+                        //.foregroundColor(.yellow)
                 }
             }
             .padding([.leading, .trailing])

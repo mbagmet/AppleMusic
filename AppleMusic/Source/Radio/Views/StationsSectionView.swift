@@ -23,9 +23,8 @@ struct StationsSectionView: View {
 
             LazyVGrid(columns: columns) {
                 ForEach(0..<10) { index in
-                    Rectangle()
-                        .frame(height: 150)
-                        .foregroundColor(.green)
+                    StationsCellView()
+                        .padding(.bottom, 9)
                 }
             }
         }
