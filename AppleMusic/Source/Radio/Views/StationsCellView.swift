@@ -32,6 +32,7 @@ struct StationsCellView: View {
                 .frame(height: 109)
 
                 Divider()
+                    .background(Color("dividerGray"))
             }
             .frame(height: 110)
         }

@@ -13,6 +13,7 @@ struct RadioCellView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Divider()
+                .background(Color("dividerGray"))
 
             Text("Избранная радиостанция")
                 .foregroundColor(.secondary)

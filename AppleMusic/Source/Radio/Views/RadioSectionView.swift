@@ -21,7 +21,6 @@ struct RadioSectionView: View {
                 ForEach(0..<10) { index in
                     RadioCellView(geometry: geometry)
                         .frame(width: geometry.size.width * 0.92)
-                        //.foregroundColor(.yellow)
                 }
             }
             .padding([.leading, .trailing])

@@ -16,6 +16,7 @@ struct StationsSectionView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Divider()
+                .background(Color("dividerGray"))
 
             Text("Станции")
                 .font(.title2)
