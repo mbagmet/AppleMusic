@@ -19,7 +19,7 @@ struct RadioSectionView: View {
     var geometry: GeometryProxy
 
     let rows = [
-        GridItem(.fixed(320))
+        GridItem(.adaptive(minimum: 280, maximum: 320))
     ]
 
     var body: some View {
