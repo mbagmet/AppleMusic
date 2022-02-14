@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct StationsSectionView: View {
+    @EnvironmentObject var modelData: ModelData
+
+    var defaultStations: [Radio] {
+        modelData.radioItems.filter { radio in
+            !radio.isFavorite
+        }
+    }
 
     let columns = [
         GridItem(.flexible())
@@ -23,8 +30,8 @@ struct StationsSectionView: View {
                 .fontWeight(.bold)
 
             LazyVGrid(columns: columns) {
-                ForEach(0..<10) { index in
-                    StationsCellView()
+                ForEach(defaultStations) { station in
+                    StationsCellView(station: station)
                         .padding(.bottom, 9)
                 }
             }
@@ -36,5 +43,6 @@ struct StationsSectionView: View {
 struct StationsSectionView_Previews: PreviewProvider {
     static var previews: some View {
         StationsSectionView()
+            .environmentObject(ModelData())
     }
 }

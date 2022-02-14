@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct RadioCellView: View {
+    @EnvironmentObject var modelData: ModelData
+    var radio: Radio
+
     var geometry: GeometryProxy
     
     var body: some View {
@@ -19,20 +22,20 @@ struct RadioCellView: View {
                 .foregroundColor(.secondary)
                 .textCase(.uppercase)
                 .font(.caption2)
-            Text("Хиты на русском")
+            Text(radio.title)
                 .foregroundColor(.primary)
                 .font(.title3)
-            Text("Станция Apple Music")
+            Text(radio.description)
                 .foregroundColor(.secondary)
                 .font(.title3)
                 .padding(.bottom, -1)
 
             ZStack(alignment: .bottomLeading) {
-                Image("radio2")
+                Image(radio.imageName)
                     .resizable()
                     .scaledToFit()
 
-                Text("Станция Apple Music")
+                Text(radio.description)
                     .font(.caption)
                     .padding(8)
                     .foregroundColor(.white)
@@ -51,9 +54,11 @@ struct RadioCellView: View {
 }
 
 struct RadioCellView_Previews: PreviewProvider {
+    static let modelData = ModelData()
+
     static var previews: some View {
         GeometryReader { geometry in
-            RadioCellView(geometry: geometry)
+            RadioCellView(radio: modelData.radioItems[0], geometry: geometry)
         }
     }
 }

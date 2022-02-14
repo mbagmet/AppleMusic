@@ -18,6 +18,7 @@ struct RadioView: View {
                     }
                 }
                 .navigationTitle("Радио")
+                .padding(.bottom, 80)
             }
             .navigationViewStyle(.stack)
 
@@ -29,5 +30,6 @@ struct RadioView: View {
 struct RadioView_Previews: PreviewProvider {
     static var previews: some View {
         RadioView()
+            .environmentObject(ModelData())
     }
 }
