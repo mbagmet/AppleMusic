@@ -11,19 +11,25 @@ struct RadioView: View {
     var body: some View {
         ZStack {
             NavigationView {
-                Text("Радио")
-                    .navigationTitle("Радио")
+                GeometryReader { geometry in
+                    ScrollView(.vertical, showsIndicators: true) {
+                        RadioSectionView(geometry: geometry)
+                        StationsSectionView()
+                    }
+                }
+                .navigationTitle("Радио")
+                .padding(.bottom, 80)
             }
             .navigationViewStyle(.stack)
 
             MediaPlayerView()
         }
-
     }
 }
 
 struct RadioView_Previews: PreviewProvider {
     static var previews: some View {
         RadioView()
+            .environmentObject(ModelData())
     }
 }
