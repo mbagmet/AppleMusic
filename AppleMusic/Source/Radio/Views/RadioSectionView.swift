@@ -26,11 +26,11 @@ struct RadioSectionView: View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHGrid(rows: rows) {
                 ForEach(favoriteStations) { radio in
-                    RadioCellView(radio: radio, geometry: geometry)
+                    RadioCellView(radio: radio)
                         .frame(width: geometry.size.width * 0.92)
                 }
             }
-            .padding([.leading, .trailing])
+            .padding([.horizontal])
         }
     }
 }
