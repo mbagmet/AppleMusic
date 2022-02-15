@@ -32,7 +32,7 @@ struct StationsCellView: View {
 
                     ShareStationMenu()
                 }
-                .frame(height: 109)
+                .frame(maxHeight: .infinity)
 
                 Divider()
                     .background(Color("dividerGray"))

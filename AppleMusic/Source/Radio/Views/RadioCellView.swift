@@ -10,8 +10,6 @@ import SwiftUI
 struct RadioCellView: View {
     @EnvironmentObject var modelData: ModelData
     var radio: Radio
-
-    var geometry: GeometryProxy
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -39,7 +37,7 @@ struct RadioCellView: View {
                     .font(.caption)
                     .padding(8)
                     .foregroundColor(.white)
-                    .frame(width: geometry.size.width * 0.92, alignment: .bottomLeading)
+                    .frame(maxWidth: .infinity, alignment: .bottomLeading)
                     .background(
                         LinearGradient(gradient: Gradient(colors: [Color("darkGray"), .black]), startPoint: .top, endPoint: .bottom)
                             .opacity(0.5)
@@ -57,8 +55,6 @@ struct RadioCellView_Previews: PreviewProvider {
     static let modelData = ModelData()
 
     static var previews: some View {
-        GeometryReader { geometry in
-            RadioCellView(radio: modelData.radioItems[0], geometry: geometry)
-        }
+        RadioCellView(radio: modelData.radioItems[0])
     }
 }
