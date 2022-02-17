@@ -1,0 +1,100 @@
+[
+    {
+        "id": 2001,
+        "title": "Лучшая новая музыка",
+        "description": "Станция Apple Music",
+        "imageName": "radio6",
+        "isFavorite": true
+    },
+    {
+        "id": 2002,
+        "title": "Классика металла",
+        "description": "Станция Apple Music",
+        "imageName": "radio1",
+        "isFavorite": true
+    },
+    {
+        "id": 2003,
+        "title": "Легкий металл-рок",
+        "description": "Станция Apple Music",
+        "imageName": "radio2",
+        "isFavorite": true
+    },
+    {
+        "id": 2004,
+        "title": "Иконы гранджа",
+        "description": "Станция Apple Music",
+        "imageName": "radio3",
+        "isFavorite": true
+    },
+    {
+        "id": 2005,
+        "title": "Русский рок: главное",
+        "description": "Станция Apple Music",
+        "imageName": "radio4",
+        "isFavorite": true
+    },
+    {
+        "id": 2006,
+        "title": "Альтернативный рок",
+        "description": "Станция Apple Music",
+        "imageName": "radio5",
+        "isFavorite": true
+    },
+    {
+        "id": 2007,
+        "title": "Тренды металла",
+        "description": "Станция Apple Music",
+        "imageName": "station1",
+        "isFavorite": false
+    },
+    {
+        "id": 2008,
+        "title": "Музыка для тренировки",
+        "description": "Станция Apple Music",
+        "imageName": "station2",
+        "isFavorite": false
+    },
+    {
+        "id": 2009,
+        "title": "Отрывные выходные",
+        "description": "Станция Apple Music",
+        "imageName": "station3",
+        "isFavorite": false
+    },
+    {
+        "id": 2010,
+        "title": "Проснись и вой",
+        "description": "Станция Apple Music",
+        "imageName": "station4",
+        "isFavorite": false
+    },
+    {
+        "id": 2011,
+        "title": "Легкий рок",
+        "description": "Станция Apple Music",
+        "imageName": "station5",
+        "isFavorite": false
+    },
+    {
+        "id": 2012,
+        "title": "Вторая смена",
+        "description": "Станция Apple Music",
+        "imageName": "station6",
+        "isFavorite": false
+    },
+    {
+        "id": 2013,
+        "title": "Пульс рока",
+        "description": "Станция Apple Music",
+        "imageName": "station7",
+        "isFavorite": false
+    },
+    {
+        "id": 2014,
+        "title": "Португальская альтернатива",
+        "description": "Станция Apple Music",
+        "imageName": "station8",
+        "isFavorite": false
+    }
+]
