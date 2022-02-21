@@ -14,7 +14,7 @@ struct CategorySearchDetailView: View {
             VStack(alignment: .leading) {
                 GeometryReader { geometry in
                     ScrollView(.vertical, showsIndicators: true) {
-                        FeaturedSectionView(geometry: geometry)
+                        //FeaturedSectionView(geometry: geometry)
                     }
                 }
             }

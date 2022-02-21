@@ -10,6 +10,7 @@ import Foundation
 final class ModelData: ObservableObject {
     @Published var libraryList: [Medialibrary] = load("MedialibraryData.json")
     @Published var radioItems: [Radio] = load("RadioData.json")
+    @Published var searchCategories: [SearchCategory] = load("SearchData.json")
 }
 
 func load<T: Decodable>(_ filename: String) -> T {

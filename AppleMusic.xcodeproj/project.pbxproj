@@ -25,6 +25,9 @@
 		799FDAB527B7AB020074384F /* StationsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799FDAB427B7AB020074384F /* StationsCellView.swift */; };
 		799FDAB827B7B8C70074384F /* ShareStationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799FDAB727B7B8C70074384F /* ShareStationMenu.swift */; };
 		79B393E327C415C900504CB6 /* CategorySearchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B393E227C415C900504CB6 /* CategorySearchDetailView.swift */; };
+		79B393E827C4271000504CB6 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B393E727C4271000504CB6 /* Search.swift */; };
+		79B393EA27C4328400504CB6 /* SearchCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B393E927C4328400504CB6 /* SearchCategory.swift */; };
+		79B393EC27C4343200504CB6 /* SearchData.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B393EB27C4343200504CB6 /* SearchData.json */; };
 		79BE7C8127B5AE9D003D7B01 /* RadioSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BE7C8027B5AE9D003D7B01 /* RadioSectionView.swift */; };
 		79BE7C8327B5AEB5003D7B01 /* StationsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BE7C8227B5AEB5003D7B01 /* StationsSectionView.swift */; };
 		79C1444D27BEEA7B00453777 /* CategorySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1444C27BEEA7B00453777 /* CategorySearchView.swift */; };
@@ -54,6 +57,9 @@
 		799FDAB427B7AB020074384F /* StationsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsCellView.swift; sourceTree = "<group>"; };
 		799FDAB727B7B8C70074384F /* ShareStationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareStationMenu.swift; sourceTree = "<group>"; };
 		79B393E227C415C900504CB6 /* CategorySearchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySearchDetailView.swift; sourceTree = "<group>"; };
+		79B393E727C4271000504CB6 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		79B393E927C4328400504CB6 /* SearchCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategory.swift; sourceTree = "<group>"; };
+		79B393EB27C4343200504CB6 /* SearchData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchData.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		79BE7C8027B5AE9D003D7B01 /* RadioSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioSectionView.swift; sourceTree = "<group>"; };
 		79BE7C8227B5AEB5003D7B01 /* StationsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsSectionView.swift; sourceTree = "<group>"; };
 		79C1444C27BEEA7B00453777 /* CategorySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySearchView.swift; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 				79992F4127AD91BA000760F3 /* Assets.xcassets */,
 				79D54F8027AFDCA60017CCE2 /* MedialibraryData.json */,
 				794D498127B916420017701B /* RadioData.json */,
+				79B393EB27C4343200504CB6 /* SearchData.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -161,6 +168,7 @@
 		794950E527ADB7BA002D868E /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				79B393E627C426EC00504CB6 /* Model */,
 				794950E727ADB7DC002D868E /* Views */,
 			);
 			path = Search;
@@ -274,6 +282,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		79B393E627C426EC00504CB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				79B393E727C4271000504CB6 /* Search.swift */,
+				79B393E927C4328400504CB6 /* SearchCategory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -335,6 +352,7 @@
 				79992F4527AD91BA000760F3 /* Preview Assets.xcassets in Resources */,
 				79D54F8127AFDCA60017CCE2 /* MedialibraryData.json in Resources */,
 				794D498227B916420017701B /* RadioData.json in Resources */,
+				79B393EC27C4343200504CB6 /* SearchData.json in Resources */,
 				79992F4227AD91BA000760F3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +375,8 @@
 				794950E327ADB788002D868E /* MedialibraryView.swift in Sources */,
 				799FDAB527B7AB020074384F /* StationsCellView.swift in Sources */,
 				794950F127ADDFF9002D868E /* AlbumImage.swift in Sources */,
+				79B393EA27C4328400504CB6 /* SearchCategory.swift in Sources */,
+				79B393E827C4271000504CB6 /* Search.swift in Sources */,
 				796E790B27B9001E00FA7EE1 /* Radio.swift in Sources */,
 				792538D427B7013B00B1F5CE /* RadioCellView.swift in Sources */,
 				79BE7C8127B5AE9D003D7B01 /* RadioSectionView.swift in Sources */,

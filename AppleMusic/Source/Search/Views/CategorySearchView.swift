@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CategorySearchView: View {
+    @EnvironmentObject var modelData: ModelData
     
     let columns = [
         GridItem(.flexible()),
@@ -15,31 +16,44 @@ struct CategorySearchView: View {
     ]
 
     var body: some View {
-            VStack(alignment: .leading) {
-                Divider()
+        VStack(alignment: .leading, spacing: 8) {
+            Divider()
 
-                Text("Поиск по категориям")
-                    .font(.title2)
-                    .bold()
+            Text("Поиск по категориям")
+                .font(.title2)
+                .bold()
 
-                LazyVGrid(columns: columns) {
-                    ForEach(1..<14) { index in
-                        NavigationLink {
-                            CategorySearchDetailView()
-                        } label: {
-                            Rectangle()
-                                .frame(height: 150)
-                                .foregroundColor(.yellow)
+            LazyVGrid(columns: columns) {
+                ForEach(modelData.searchCategories) { category in
+                    NavigationLink {
+                        CategorySearchDetailView()
+                    } label: {
+                        ZStack(alignment: .bottomLeading) {
+                            Image(category.imageName)
+                                .resizable()
+                                .scaledToFill()
+                                .clipShape(RoundedRectangle(cornerRadius: 5))
+
+                            Text(category.title)
+                                .font(.footnote)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .multilineTextAlignment(.leading)
+                                .padding()
                         }
+
                     }
                 }
             }
-            .padding(.horizontal)
+        }
+        .padding(.horizontal)
+        .padding(.bottom, 90)
     }
 }
 
 struct CategorySearchView_Previews: PreviewProvider {
     static var previews: some View {
         CategorySearchView()
+            .environmentObject(ModelData())
     }
 }
