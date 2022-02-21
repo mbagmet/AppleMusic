@@ -24,8 +24,10 @@
 		79992F4527AD91BA000760F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79992F4427AD91BA000760F3 /* Preview Assets.xcassets */; };
 		799FDAB527B7AB020074384F /* StationsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799FDAB427B7AB020074384F /* StationsCellView.swift */; };
 		799FDAB827B7B8C70074384F /* ShareStationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799FDAB727B7B8C70074384F /* ShareStationMenu.swift */; };
+		79B393E327C415C900504CB6 /* CategorySearchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B393E227C415C900504CB6 /* CategorySearchDetailView.swift */; };
 		79BE7C8127B5AE9D003D7B01 /* RadioSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BE7C8027B5AE9D003D7B01 /* RadioSectionView.swift */; };
 		79BE7C8327B5AEB5003D7B01 /* StationsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BE7C8227B5AEB5003D7B01 /* StationsSectionView.swift */; };
+		79C1444D27BEEA7B00453777 /* CategorySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1444C27BEEA7B00453777 /* CategorySearchView.swift */; };
 		79D54F7D27AFD5600017CCE2 /* Medialibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D54F7C27AFD5600017CCE2 /* Medialibrary.swift */; };
 		79D54F7F27AFD6970017CCE2 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D54F7E27AFD6970017CCE2 /* ModelData.swift */; };
 		79D54F8127AFDCA60017CCE2 /* MedialibraryData.json in Resources */ = {isa = PBXBuildFile; fileRef = 79D54F8027AFDCA60017CCE2 /* MedialibraryData.json */; };
@@ -51,8 +53,10 @@
 		79992F4427AD91BA000760F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		799FDAB427B7AB020074384F /* StationsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsCellView.swift; sourceTree = "<group>"; };
 		799FDAB727B7B8C70074384F /* ShareStationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareStationMenu.swift; sourceTree = "<group>"; };
+		79B393E227C415C900504CB6 /* CategorySearchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySearchDetailView.swift; sourceTree = "<group>"; };
 		79BE7C8027B5AE9D003D7B01 /* RadioSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioSectionView.swift; sourceTree = "<group>"; };
 		79BE7C8227B5AEB5003D7B01 /* StationsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsSectionView.swift; sourceTree = "<group>"; };
+		79C1444C27BEEA7B00453777 /* CategorySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySearchView.swift; sourceTree = "<group>"; };
 		79D54F7C27AFD5600017CCE2 /* Medialibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medialibrary.swift; sourceTree = "<group>"; };
 		79D54F7E27AFD6970017CCE2 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		79D54F8027AFDCA60017CCE2 /* MedialibraryData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MedialibraryData.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
@@ -179,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				794950E827ADB7EF002D868E /* SearchView.swift */,
+				79C1444C27BEEA7B00453777 /* CategorySearchView.swift */,
+				79B393E227C415C900504CB6 /* CategorySearchDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -342,6 +348,7 @@
 			files = (
 				794B34EC27B1B91C000296B1 /* MedialibraryStartView.swift in Sources */,
 				79810D4F27B15898001A5C06 /* MedialibraryRowView.swift in Sources */,
+				79C1444D27BEEA7B00453777 /* CategorySearchView.swift in Sources */,
 				79D54F7D27AFD5600017CCE2 /* Medialibrary.swift in Sources */,
 				794950E927ADB7EF002D868E /* SearchView.swift in Sources */,
 				79992F4027AD91B8000760F3 /* MainView.swift in Sources */,
@@ -358,6 +365,7 @@
 				79D54F7F27AFD6970017CCE2 /* ModelData.swift in Sources */,
 				79D54F8327AFDFF60017CCE2 /* MedialibraryListView.swift in Sources */,
 				798DAB0527AFCB240047FFD6 /* PlayerButton.swift in Sources */,
+				79B393E327C415C900504CB6 /* CategorySearchDetailView.swift in Sources */,
 				794950EB27ADB805002D868E /* RadioView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
