@@ -26,7 +26,7 @@ struct CategorySearchView: View {
             LazyVGrid(columns: columns) {
                 ForEach(modelData.searchCategories) { category in
                     NavigationLink {
-                        CategorySearchDetailView()
+                        CategorySearchDetailView(category: category)
                     } label: {
                         ZStack(alignment: .bottomLeading) {
                             Image(category.imageName)
@@ -39,7 +39,8 @@ struct CategorySearchView: View {
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
                                 .multilineTextAlignment(.leading)
-                                .padding()
+                                .padding(.horizontal)
+                                .padding(.vertical, 10)
                         }
 
                     }

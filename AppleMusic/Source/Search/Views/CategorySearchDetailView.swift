@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CategorySearchDetailView: View {
 
+    var category: SearchCategory
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -19,13 +21,15 @@ struct CategorySearchDetailView: View {
                 }
             }
         }
-        .navigationBarTitle("Рок")
+        .navigationBarTitle(category.title)
         .navigationBarTitleDisplayMode(.large)
     }
 }
 
 struct CategorySearchDetailView_Previews: PreviewProvider {
+    static let modelData = ModelData()
+
     static var previews: some View {
-        CategorySearchDetailView()
+        CategorySearchDetailView(category: modelData.searchCategories[0])
     }
 }
