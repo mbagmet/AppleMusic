@@ -11,5 +11,4 @@ struct SearchCategory: Hashable, Codable, Identifiable {
     var id: Int
     var title: String
     var imageName: String
-    var items: [Search]?
 }

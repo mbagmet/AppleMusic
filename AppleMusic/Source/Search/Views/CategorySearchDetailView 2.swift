@@ -8,26 +8,21 @@
 import SwiftUI
 
 struct CategorySearchDetailView: View {
-    @EnvironmentObject var modelData: ModelData
 
     var category: SearchCategory
 
     var body: some View {
-        ZStack {
+        ScrollView {
             VStack(alignment: .leading) {
                 GeometryReader { geometry in
                     ScrollView(.vertical, showsIndicators: true) {
-                        FeaturedSectionView(geometry: geometry)
-                        //StationsSectionView()
+                        //FeaturedSectionView(geometry: geometry)
                     }
                 }
             }
-            .navigationBarTitle(category.title)
-            .navigationBarTitleDisplayMode(.large)
-            .padding(.bottom, 80)
-
-            MediaPlayerView()
         }
+        .navigationBarTitle(category.title)
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 
@@ -36,6 +31,5 @@ struct CategorySearchDetailView_Previews: PreviewProvider {
 
     static var previews: some View {
         CategorySearchDetailView(category: modelData.searchCategories[0])
-            .environmentObject(ModelData())
     }
 }
