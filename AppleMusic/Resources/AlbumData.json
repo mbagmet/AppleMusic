@@ -4,7 +4,7 @@
         "titleDescription": "Новый альбом",
         "title": "Oochya!",
         "author": "Stereophonics",
-        "description": "Кслассический британский рок в 12-м лонгплее уэльской группы.",
+        "description": "Классический британский рок в 12-м лонгплее уэльской группы.",
         "imageName": "album1",
         "smallImageName": "album1_small",
         "isFeatured": true
@@ -17,7 +17,7 @@
         "description": "Переиздание седьмого альбома певицы с бонусными треками.",
         "imageName": "album2",
         "smallImageName": "album2_small",
-        "isFeatured": true
+        "isFeatured": false
     },
     {
         "id": 4003,

@@ -10,11 +10,11 @@ import SwiftUI
 struct FeaturedSectionView: View {
     @EnvironmentObject var modelData: ModelData
 
-//    var favoriteStations: [Radio] {
-//        modelData.radioItems.filter { radio in
-//            radio.isFavorite
-//        }
-//    }
+    var featuredAlbum: [Album] {
+        modelData.albums.filter { album in
+            album.isFeatured
+        }
+    }
 
     var geometry: GeometryProxy
 
@@ -25,7 +25,7 @@ struct FeaturedSectionView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHGrid(rows: rows) {
-                ForEach(modelData.albums) { album in
+                ForEach(featuredAlbum) { album in
                     FeaturedCellView(album: album)
                         .frame(width: geometry.size.width * 0.92)
                 }

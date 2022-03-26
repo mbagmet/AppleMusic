@@ -38,6 +38,8 @@
 		D956E81427D69646004C6ED9 /* AlbumData.json in Resources */ = {isa = PBXBuildFile; fileRef = D956E81327D69646004C6ED9 /* AlbumData.json */; };
 		D956E81627D6A0AB004C6ED9 /* FeaturedSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956E81527D6A0AB004C6ED9 /* FeaturedSectionView.swift */; };
 		D956E81927D6A3B2004C6ED9 /* FeaturedCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956E81827D6A3B2004C6ED9 /* FeaturedCellView.swift */; };
+		D95B5AA127D7F3BC003CC7CB /* HorizontalSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95B5AA027D7F3BC003CC7CB /* HorizontalSectionView.swift */; };
+		D95B5AA327D7FA7B003CC7CB /* HorizontalCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95B5AA227D7FA7B003CC7CB /* HorizontalCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +75,8 @@
 		D956E81327D69646004C6ED9 /* AlbumData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AlbumData.json; sourceTree = "<group>"; };
 		D956E81527D6A0AB004C6ED9 /* FeaturedSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedSectionView.swift; sourceTree = "<group>"; };
 		D956E81827D6A3B2004C6ED9 /* FeaturedCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCellView.swift; sourceTree = "<group>"; };
+		D95B5AA027D7F3BC003CC7CB /* HorizontalSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSectionView.swift; sourceTree = "<group>"; };
+		D95B5AA227D7FA7B003CC7CB /* HorizontalCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +205,7 @@
 				79C1444C27BEEA7B00453777 /* CategorySearchView.swift */,
 				79B393E227C415C900504CB6 /* CategorySearchDetailView.swift */,
 				D956E81727D6A387004C6ED9 /* Featured */,
+				D95B5A9F27D7F397003CC7CB /* Horizontal */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -308,6 +313,15 @@
 			path = Featured;
 			sourceTree = "<group>";
 		};
+		D95B5A9F27D7F397003CC7CB /* Horizontal */ = {
+			isa = PBXGroup;
+			children = (
+				D95B5AA027D7F3BC003CC7CB /* HorizontalSectionView.swift */,
+				D95B5AA227D7FA7B003CC7CB /* HorizontalCellView.swift */,
+			);
+			path = Horizontal;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -384,11 +398,13 @@
 			files = (
 				794B34EC27B1B91C000296B1 /* MedialibraryStartView.swift in Sources */,
 				79810D4F27B15898001A5C06 /* MedialibraryRowView.swift in Sources */,
+				D95B5AA127D7F3BC003CC7CB /* HorizontalSectionView.swift in Sources */,
 				79C1444D27BEEA7B00453777 /* CategorySearchView.swift in Sources */,
 				79D54F7D27AFD5600017CCE2 /* Medialibrary.swift in Sources */,
 				794950E927ADB7EF002D868E /* SearchView.swift in Sources */,
 				79992F4027AD91B8000760F3 /* MainView.swift in Sources */,
 				79992F3E27AD91B8000760F3 /* AppleMusicApp.swift in Sources */,
+				D95B5AA327D7FA7B003CC7CB /* HorizontalCellView.swift in Sources */,
 				799FDAB827B7B8C70074384F /* ShareStationMenu.swift in Sources */,
 				794950E327ADB788002D868E /* MedialibraryView.swift in Sources */,
 				799FDAB527B7AB020074384F /* StationsCellView.swift in Sources */,

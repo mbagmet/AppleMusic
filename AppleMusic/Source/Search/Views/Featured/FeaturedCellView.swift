@@ -50,7 +50,6 @@ struct FeaturedCellView: View {
             }
             .clipped()
         }
-
     }
 }
 

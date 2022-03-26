@@ -18,7 +18,8 @@ struct CategorySearchDetailView: View {
                 GeometryReader { geometry in
                     ScrollView(.vertical, showsIndicators: true) {
                         FeaturedSectionView(geometry: geometry)
-                        //StationsSectionView()
+                        HorizontalSectionView(geometry: geometry)
+                        HorizontalSectionView(geometry: geometry, hasTwoRows: true)
                     }
                 }
             }
