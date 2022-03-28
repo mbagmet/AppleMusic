@@ -1,0 +1,42 @@
+[
+    {
+        "id": 4001,
+        "titleDescription": "Новый альбом",
+        "title": "Oochya!",
+        "author": "Stereophonics",
+        "description": "Классический британский рок в 12-м лонгплее уэльской группы.",
+        "imageName": "album1",
+        "smallImageName": "album1_small",
+        "isFeatured": true
+    },
+    {
+        "id": 4002,
+        "titleDescription": "Новая deluxe-версия",
+        "title": "бомберлайн (deluxe edition)",
+        "author": "Земфира",
+        "description": "Переиздание седьмого альбома певицы с бонусными треками.",
+        "imageName": "album2",
+        "smallImageName": "album2_small",
+        "isFeatured": false
+    },
+    {
+        "id": 4003,
+        "titleDescription": "Обновленный плейлист",
+        "title": "Новый рок",
+        "author": "Apple Music Rock",
+        "description": "Нопоминаем: рок-н-ролл живее всех живых.",
+        "imageName": "album3",
+        "smallImageName": "album3_small",
+        "isFeatured": true
+    },
+    {
+        "id": 4004,
+        "titleDescription": "Новый релиз",
+        "title": "Я никому не верю",
+        "author": "Би-2",
+        "description": "Новый сингл рок-группы на стыке синти-попа и дарквейва.",
+        "imageName": "album4",
+        "smallImageName": "album4_small",
+        "isFeatured": true
+    }
+]
