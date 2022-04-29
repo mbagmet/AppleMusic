@@ -12,6 +12,7 @@ struct HorizontalSectionView: View {
     
     var geometry: GeometryProxy
     
+    @State var title: String
     @State var hasTwoRows = false
 
     let rows = [
@@ -23,22 +24,9 @@ struct HorizontalSectionView: View {
         GridItem(.flexible(minimum: 230, maximum: 320))
     ]
     
-    var favoriteStations: [Radio] {
-        modelData.radioItems.filter { radio in
-            radio.isFavorite
-        }
-    }
-    
     var body: some View {
         VStack(alignment: .leading) {
-            Divider()
-                .background(Color("dividerGray"))
-                .padding([.horizontal])
-
-            Text("Пространственное аудио")
-                .font(.title2)
-                .fontWeight(.bold)
-                .padding([.horizontal])
+            HorizontalSectionTitleView(title: $title)
 
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHGrid(rows: hasTwoRows ? doubleRows : rows) {
@@ -57,7 +45,7 @@ struct HorizontalSectionView: View {
 struct HorizontalSectionView_Previews: PreviewProvider {
     static var previews: some View {
         GeometryReader { geometry in
-            HorizontalSectionView(geometry: geometry)
+            HorizontalSectionView(geometry: geometry, title: "Пространственное аудио")
                 .environmentObject(ModelData())
         }
     }
