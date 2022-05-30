@@ -8,18 +8,28 @@
 import SwiftUI
 
 struct SearchView: View {
-    @State private var searchText = ""
+    @State var isSearching = false
+    @State var searchQuery = ""
+    @State var pickerSelection = "music"
 
     var body: some View {
         ZStack {
             NavigationView {
                 ScrollView {
-                    CategorySearchView()
+                    SearchResultsView(searchQuery: $searchQuery, pickerSelection: $pickerSelection)
                 }
-                .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Радиостанции")
                 .navigationBarTitle("Поиск", displayMode: .large)
             }
             .navigationViewStyle(.stack)
+            
+            .searchable(text: $searchQuery,
+                        placement: .navigationBarDrawer(displayMode: .always),
+                        prompt: (pickerSelection == "music" ? "Радиостанции" : "Ваша медиатека")) {
+                
+                if searchQuery == "" {
+//                    SearchSuggestionsView()
+                }
+            }
 
             MediaPlayerView()
         }
