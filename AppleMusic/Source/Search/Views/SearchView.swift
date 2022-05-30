@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct SearchView: View {
+    @State private var searchText = ""
+
     var body: some View {
         ZStack {
             NavigationView {
-                Text("Поиск")
-                    .navigationTitle("Поиск")
+                ScrollView {
+                    CategorySearchView()
+                }
+                .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Радиостанции")
+                .navigationBarTitle("Поиск", displayMode: .large)
             }
             .navigationViewStyle(.stack)
 
@@ -24,5 +29,6 @@ struct SearchView: View {
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
         SearchView()
+            .environmentObject(ModelData())
     }
 }
