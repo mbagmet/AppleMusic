@@ -35,6 +35,8 @@
 		79D54F7F27AFD6970017CCE2 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D54F7E27AFD6970017CCE2 /* ModelData.swift */; };
 		79D54F8127AFDCA60017CCE2 /* MedialibraryData.json in Resources */ = {isa = PBXBuildFile; fileRef = 79D54F8027AFDCA60017CCE2 /* MedialibraryData.json */; };
 		79D54F8327AFDFF60017CCE2 /* MedialibraryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D54F8227AFDFF60017CCE2 /* MedialibraryListView.swift */; };
+		D934A64E2845187C00AE79AB /* SearchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934A64D2845187C00AE79AB /* SearchResultsView.swift */; };
+		D934A65228452AFC00AE79AB /* SearchSuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934A65128452AFC00AE79AB /* SearchSuggestionsView.swift */; };
 		D94AEE0D281C0A5500F7EEC9 /* HorizontalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94AEE0C281C0A5500F7EEC9 /* HorizontalListView.swift */; };
 		D94AEE10281C0E1500F7EEC9 /* HorizontalSectionTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94AEE0F281C0E1500F7EEC9 /* HorizontalSectionTitleView.swift */; };
 		D94AEE12281C147500F7EEC9 /* HorizontalListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94AEE11281C147500F7EEC9 /* HorizontalListCellView.swift */; };
@@ -76,6 +78,8 @@
 		79D54F7E27AFD6970017CCE2 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		79D54F8027AFDCA60017CCE2 /* MedialibraryData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MedialibraryData.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		79D54F8227AFDFF60017CCE2 /* MedialibraryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedialibraryListView.swift; sourceTree = "<group>"; };
+		D934A64D2845187C00AE79AB /* SearchResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsView.swift; sourceTree = "<group>"; };
+		D934A65128452AFC00AE79AB /* SearchSuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestionsView.swift; sourceTree = "<group>"; };
 		D94AEE0C281C0A5500F7EEC9 /* HorizontalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalListView.swift; sourceTree = "<group>"; };
 		D94AEE0F281C0E1500F7EEC9 /* HorizontalSectionTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSectionTitleView.swift; sourceTree = "<group>"; };
 		D94AEE11281C147500F7EEC9 /* HorizontalListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalListCellView.swift; sourceTree = "<group>"; };
@@ -212,6 +216,7 @@
 				794950E827ADB7EF002D868E /* SearchView.swift */,
 				79C1444C27BEEA7B00453777 /* CategorySearchView.swift */,
 				79B393E227C415C900504CB6 /* CategorySearchDetailView.swift */,
+				D934A64C2845184900AE79AB /* Search */,
 				D956E81727D6A387004C6ED9 /* Featured */,
 				D95B5A9F27D7F397003CC7CB /* Horizontal */,
 			);
@@ -310,6 +315,15 @@
 				79B393E927C4328400504CB6 /* SearchCategory.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D934A64C2845184900AE79AB /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				D934A64D2845187C00AE79AB /* SearchResultsView.swift */,
+				D934A65128452AFC00AE79AB /* SearchSuggestionsView.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		D94AEE0E281C0D8900F7EEC9 /* Helpers */ = {
@@ -437,10 +451,12 @@
 				792538D427B7013B00B1F5CE /* RadioCellView.swift in Sources */,
 				79BE7C8127B5AE9D003D7B01 /* RadioSectionView.swift in Sources */,
 				79BE7C8327B5AEB5003D7B01 /* StationsSectionView.swift in Sources */,
+				D934A64E2845187C00AE79AB /* SearchResultsView.swift in Sources */,
 				794950EF27ADD56E002D868E /* MediaPlayerView.swift in Sources */,
 				79D54F7F27AFD6970017CCE2 /* ModelData.swift in Sources */,
 				79D54F8327AFDFF60017CCE2 /* MedialibraryListView.swift in Sources */,
 				D956E81627D6A0AB004C6ED9 /* FeaturedSectionView.swift in Sources */,
+				D934A65228452AFC00AE79AB /* SearchSuggestionsView.swift in Sources */,
 				D94AEE12281C147500F7EEC9 /* HorizontalListCellView.swift in Sources */,
 				798DAB0527AFCB240047FFD6 /* PlayerButton.swift in Sources */,
 				79B393E327C415C900504CB6 /* CategorySearchDetailView.swift in Sources */,
