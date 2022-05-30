@@ -7,7 +7,7 @@
         "description": "Классический британский рок в 12-м лонгплее уэльской группы.",
         "imageName": "album1",
         "smallImageName": "album1_small",
-        "isFeatured": true
+        "isFeatured": false
     },
     {
         "id": 4002,
@@ -37,6 +37,46 @@
         "description": "Новый сингл рок-группы на стыке синти-попа и дарквейва.",
         "imageName": "album4",
         "smallImageName": "album4_small",
+        "isFeatured": true
+    },
+    {
+        "id": 4005,
+        "titleDescription": "Новый EP",
+        "title": "Portals EP",
+        "author": "Kirk Hammet",
+        "description": "Классический тяжелый австралийский рок.",
+        "imageName": "album5",
+        "smallImageName": "album5_small",
+        "isFeatured": true
+    },
+    {
+        "id": 4006,
+        "titleDescription": "Обновленный плейлист",
+        "title": "Проснись и вой",
+        "author": "Apple Music Альтернатива",
+        "description": "Безбашенные и беспощадные альтернативные хиты для бодрости и боевого настроения.",
+        "imageName": "album6",
+        "smallImageName": "album6_small",
+        "isFeatured": true
+    },
+    {
+        "id": 4007,
+        "titleDescription": "Избранное шоу",
+        "title": "Rocket hour",
+        "author": "Элтон Джон",
+        "description": "Поп-легенда и одержимый меломан делится любимой музыкой.",
+        "imageName": "album7",
+        "smallImageName": "album7_small",
+        "isFeatured": true
+    },
+    {
+        "id": 4008,
+        "titleDescription": "Избранный плейлист",
+        "title": "Cosics by Barteese Strange",
+        "author": "4AD",
+        "description": "Here’s a playlist of songs I personally cosign - songs I’ve been spinning daily since they’ve dropped.",
+        "imageName": "album8",
+        "smallImageName": "album8_small",
         "isFeatured": true
     }
 ]

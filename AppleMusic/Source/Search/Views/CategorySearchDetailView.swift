@@ -18,8 +18,8 @@ struct CategorySearchDetailView: View {
                 GeometryReader { geometry in
                     ScrollView(.vertical, showsIndicators: true) {
                         FeaturedSectionView(geometry: geometry)
-                        HorizontalSectionView(geometry: geometry, title: "Пространственное аудио")
-                        HorizontalSectionView(geometry: geometry, title: "Плейлисты", hasTwoRows: true)
+                        HorizontalSectionView(geometry: geometry, title: "Пространственное аудио", featuredOnly: false)
+                        HorizontalSectionView(geometry: geometry, title: "Плейлисты", hasTwoRows: true, featuredOnly: true)
                         HorizontalListView(geometry: geometry, title: "Горячие треки")
                     }
                 }
