@@ -8,37 +8,42 @@
 import SwiftUI
 
 struct MediaPlayerDetailView: View {
+    @Environment(\.safeAreaInsets) private var safeAreaInsets
+    
     @Binding var showMediaPlayerDetail: Bool
     
-    @State private var dragAmount = CGFloat.zero
+    @Binding var dragAmount: CGFloat
     @State private var heightForAnimation = UIScreen.main.bounds.size.height / 3
+    
+    @State var isPlaying = false
     
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color("topGray"), Color("centerGray"), Color("bottomDarkGray")]), startPoint: .top, endPoint: .bottom)
 
             VStack {
-                Text("Hello, World!")
-                    .onTapGesture {
-                        withAnimation(.openCloseCover()) {
-                            showMediaPlayerDetail.toggle()
-                        }
-                    }
-                
-                Spacer()
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                TopTapableLineView(showMediaPlayerDetail: $showMediaPlayerDetail)
+                AlbumImageView(isPalying: $isPlaying, showMediaPlayerDetail: $showMediaPlayerDetail)
+                TrackNameView()
+                SongTimelineView()
+                PlaybackButtonsView(isPlaying: $isPlaying)
+                VolumeView()
+                AdditionalButtonsView()
                 Spacer()
             }
+            .padding(safeAreaInsets)
+            .padding(.horizontal, 30)
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .ignoresSafeArea(.all)
         
+        
         .offset(y: dragAmount)
         .gesture(
             DragGesture()
                 .onChanged {
-                    if $0.translation.height > 0 && showMediaPlayerDetail {
+                    if $0.translation.height > 20 && showMediaPlayerDetail {
                         dragAmount = $0.translation.height
                     }
                 }
@@ -62,6 +67,6 @@ struct MediaPlayerDetailView: View {
 
 struct MediaPlayerDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MediaPlayerDetailView(showMediaPlayerDetail: .constant(false))
+        MediaPlayerDetailView(showMediaPlayerDetail: .constant(false), dragAmount: .constant(CGFloat.zero))
     }
 }

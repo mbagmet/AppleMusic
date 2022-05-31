@@ -11,6 +11,7 @@ struct MainView: View {
     @State var showMediaPlayerDetail = false
     
     @State private var screenHeight = UIScreen.main.bounds.size.height
+    @State var dragAmount = CGFloat.zero
     
     var body: some View {
         ZStack {
@@ -35,8 +36,8 @@ struct MainView: View {
                     }
             }
 
-            MediaPlayerDetailView(showMediaPlayerDetail: $showMediaPlayerDetail)
-            .offset(y: showMediaPlayerDetail ? 0 : screenHeight)
+            MediaPlayerDetailView(showMediaPlayerDetail: $showMediaPlayerDetail, dragAmount: $dragAmount)
+            .offset(y: showMediaPlayerDetail ? dragAmount : screenHeight)
         } 
     }
 }

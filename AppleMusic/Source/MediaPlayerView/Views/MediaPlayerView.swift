@@ -18,7 +18,8 @@ struct MediaPlayerView: View {
                 HStack {
                     AlbumImage(image: Image("albumPlaceholder"))
 
-                    Text("Не исполняется")
+                    Text("A Place for My Head")
+                        .lineLimit(1)
 
                     Spacer()
 
@@ -34,17 +35,6 @@ struct MediaPlayerView: View {
                 Divider()
             }
             .background(.bar)
-            
-            .gesture(
-                DragGesture()
-                    .onChanged {
-                        if $0.translation.height > 0 && showMediaPlayerDetail {
-                            withAnimation(.openCloseCover()) {
-                                showMediaPlayerDetail.toggle()
-                            }
-                        }
-                    }
-            )
             
             .onTapGesture {
                 withAnimation(.openCloseCover()) {
