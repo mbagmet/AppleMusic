@@ -8,27 +8,36 @@
 import SwiftUI
 
 struct MainView: View {
+    @State var showMediaPlayerDetail = false
+    
+    @State private var screenHeight = UIScreen.main.bounds.size.height
+    
     var body: some View {
-        TabView {
-            MedialibraryView()
-                .tabItem {
-                    Image("library")
-                        .renderingMode(.template)
-                    Text("Медиатека")
-                }
+        ZStack {
+            TabView {
+                MedialibraryView(showMediaPlayerDetail: $showMediaPlayerDetail)
+                    .tabItem {
+                        Image("library")
+                            .renderingMode(.template)
+                        Text("Медиатека")
+                    }
 
-            RadioView()
-                .tabItem {
-                    Image(systemName: "dot.radiowaves.left.and.right")
-                    Text("Радио")
-                }
+                RadioView(showMediaPlayerDetail: $showMediaPlayerDetail)
+                    .tabItem {
+                        Image(systemName: "dot.radiowaves.left.and.right")
+                        Text("Радио")
+                    }
 
-            SearchView()
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Поиск")
-                }
-        }
+                SearchView(showMediaPlayerDetail: $showMediaPlayerDetail)
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("Поиск")
+                    }
+            }
+
+            MediaPlayerDetailView(showMediaPlayerDetail: $showMediaPlayerDetail)
+            .offset(y: showMediaPlayerDetail ? 0 : screenHeight)
+        } 
     }
 }
 

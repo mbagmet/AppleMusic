@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SearchView: View {
+    @Binding var showMediaPlayerDetail: Bool
+    
     @State var isSearching = false
     @State var searchQuery = ""
     @State var pickerSelection = "music"
@@ -31,14 +33,14 @@ struct SearchView: View {
                 }
             }
 
-            MediaPlayerView()
+            MediaPlayerView(showMediaPlayerDetail: $showMediaPlayerDetail)
         }
     }
 }
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView()
+        SearchView(showMediaPlayerDetail: .constant(false))
             .environmentObject(ModelData())
     }
 }
