@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MedialibraryView: View {
     @State var isEditMode = false
+    @Binding var showMediaPlayerDetail: Bool
 
     var body: some View {
         ZStack {
@@ -30,14 +31,14 @@ struct MedialibraryView: View {
             }
             .navigationViewStyle(.stack)
 
-            MediaPlayerView()
+            MediaPlayerView(showMediaPlayerDetail: $showMediaPlayerDetail)
         }
     }
 }
 
 struct MedialibraryView_Previews: PreviewProvider {
     static var previews: some View {
-        MedialibraryView()
+        MedialibraryView(showMediaPlayerDetail: .constant(false))
             .environmentObject(ModelData())
     }
 }

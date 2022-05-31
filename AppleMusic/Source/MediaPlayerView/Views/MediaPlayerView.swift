@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct MediaPlayerView: View {
+    @Binding var showMediaPlayerDetail: Bool
+    
     var body: some View {
         VStack {
             Spacer()
 
             VStack {
                 HStack {
-                    AlbumImage(image: Image("albumPlaceholder"))
+                    AlbumImage(showMediaPlayerDetail: $showMediaPlayerDetail, image: Image("albumPlaceholder"))
 
-                    Text("Не исполняется")
+                    Text("A Place for My Head")
+                        .lineLimit(1)
 
                     Spacer()
 
@@ -32,12 +35,18 @@ struct MediaPlayerView: View {
                 Divider()
             }
             .background(.bar)
+            
+            .onTapGesture {
+                withAnimation(.openCloseCover()) {
+                    showMediaPlayerDetail.toggle()
+                }
+            }
         }
     }
 }
 
 struct MediaPlayerView_Previews: PreviewProvider {
     static var previews: some View {
-        MediaPlayerView()
+        MediaPlayerView(showMediaPlayerDetail: .constant(false))
     }
 }

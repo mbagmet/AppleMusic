@@ -27,8 +27,6 @@ struct CategorySearchDetailView: View {
             .navigationBarTitle(category.title)
             .navigationBarTitleDisplayMode(.large)
             .padding(.bottom, 80)
-
-            MediaPlayerView()
         }
     }
 }
