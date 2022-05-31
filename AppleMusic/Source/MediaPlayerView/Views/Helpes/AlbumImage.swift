@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct AlbumImage: View {
+    @Binding var showMediaPlayerDetail: Bool
+    
     var image: Image
 
     var body: some View {
         Image("song")
             .resizable()
             .scaledToFit()
-            .frame(width: 44, height: 44)
+            .frame(width: showMediaPlayerDetail ? 84 : 44,
+                   height: showMediaPlayerDetail ? 84 : 44)
             .clipShape(RoundedRectangle(cornerRadius: 3))
             .shadow(color: Color("albumGrayBackground"), radius: 4, x: 0, y: 4)
             .opacity(0.8)
@@ -30,6 +33,6 @@ struct AlbumImage: View {
 
 struct AlbumImage_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumImage(image: Image("albumPlaceholder"))
+        AlbumImage(showMediaPlayerDetail: .constant(false), image: Image("albumPlaceholder"))
     }
 }

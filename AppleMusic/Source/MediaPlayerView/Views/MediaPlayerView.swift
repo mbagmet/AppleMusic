@@ -16,7 +16,7 @@ struct MediaPlayerView: View {
 
             VStack {
                 HStack {
-                    AlbumImage(image: Image("albumPlaceholder"))
+                    AlbumImage(showMediaPlayerDetail: $showMediaPlayerDetail, image: Image("albumPlaceholder"))
 
                     Text("A Place for My Head")
                         .lineLimit(1)
