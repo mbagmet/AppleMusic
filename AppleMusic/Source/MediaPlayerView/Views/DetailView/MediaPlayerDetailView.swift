@@ -67,6 +67,6 @@ struct MediaPlayerDetailView: View {
 
 struct MediaPlayerDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MediaPlayerDetailView(showMediaPlayerDetail: .constant(false), dragAmount: .constant(CGFloat.zero))
+        MediaPlayerDetailView(showMediaPlayerDetail: .constant(true), dragAmount: .constant(CGFloat.zero))
     }
 }
