@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SearchSuggestionsView: View {
     @EnvironmentObject var modelData: ModelData
+    @Binding var searchQuery: String
     
     private var suggestions: [Radio] {
         modelData.radioItems.filter { radio in
@@ -22,19 +23,22 @@ struct SearchSuggestionsView: View {
                 Image(systemName: "magnifyingglass")
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 16)
+                    .frame(height: 17)
+                    .foregroundColor(Color("AccentColor"))
                 
-                Text(suggestion.title)
-                    //.padding(.bottom, 0)
-                    .searchCompletion(suggestion.title)
+                Button(suggestion.title) {
+                    searchQuery = suggestion.title
+                }
             }
+            .padding(.horizontal, 12)
+            .padding(.top, 3)
         }
     }
 }
 
 struct SearchSuggestionsView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchSuggestionsView()
+        SearchSuggestionsView(searchQuery: .constant(""))
             .environmentObject(ModelData())
     }
 }
