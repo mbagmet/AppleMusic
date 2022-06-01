@@ -16,7 +16,7 @@ struct StationsCellView: View {
 
     var body: some View {
         HStack(alignment: .top, spacing: (isSmall ? 5 : 10)) {
-            Image(station.imageName)
+            Image(station.smallImageName)
                 .resizable()
                 .scaledToFit()
                 .frame(width: (isSmall ? 50 : 100), height: (isSmall ? 50 : 100))

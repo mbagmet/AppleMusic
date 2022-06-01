@@ -39,12 +39,17 @@ struct SearchResultsView: View {
             } else {
                 VStack(alignment: .leading) {
                     if searchQuery.isEmpty {
+                        // MARK: - Picker
                         Picker.init("", selection: $pickerSelection) {
                             Text("Apple Music").tag("music")
                             Text("Ваша медиатека").tag("library")
                         }
                         .pickerStyle(.segmented)
                         
+                        // MARK: - Подсказки
+                        SearchSuggestionsView(searchQuery: $searchQuery)
+                        
+                        // MARK: - Последние результаты поиска
                         if lastSearchResults != [] {
                             HStack(alignment: .center) {
                                 Text("Недавние поиски")

@@ -26,12 +26,7 @@ struct SearchView: View {
             
             .searchable(text: $searchQuery,
                         placement: .navigationBarDrawer(displayMode: .always),
-                        prompt: (pickerSelection == "music" ? "Радиостанции" : "Ваша медиатека")) {
-                
-                if searchQuery == "" {
-//                    SearchSuggestionsView()
-                }
-            }
+                        prompt: (pickerSelection == "music" ? "Радиостанции" : "Ваша медиатека"))
 
             MediaPlayerView(showMediaPlayerDetail: $showMediaPlayerDetail)
         }
