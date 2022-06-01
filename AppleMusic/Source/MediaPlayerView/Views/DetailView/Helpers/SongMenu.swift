@@ -10,11 +10,50 @@ import SwiftUI
 struct SongMenu: View {
     var body: some View {
         Menu {
-            Button {
+            Section {
+                Button {
 
-            } label: {
-                Label("Поделиться станцией...", systemImage: "square.and.arrow.up")
+                } label: {
+                    Label("Предлагать меньше похожих", systemImage: "hand.thumbsdown")
+                }
+                Button {
+
+                } label: {
+                    Label("Нравится", systemImage: "heart")
+                }
             }
+            
+            Section {
+                Button {
+
+                } label: {
+                    Label("Показать альбом", systemImage: "music.note")
+                }
+                Button {
+
+                } label: {
+                    Label("Поделиться песней", systemImage: "square.and.arrow.up")
+                }
+            }
+            
+            Section {
+                Button {
+
+                } label: {
+                    Label("Добавить в плейлист", systemImage: "text.badge.plus")
+                }
+                Button {
+
+                } label: {
+                    Label("Загрузить", systemImage: "arrow.down.circle")
+                }
+                Button {
+
+                } label: {
+                    Label("Удалить из Медиатеки", systemImage: "trash")
+                }
+            }
+            
         } label: {
             Image(systemName: "ellipsis.circle.fill")
                 .resizable()
