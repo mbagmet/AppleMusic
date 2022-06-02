@@ -9,26 +9,39 @@ import SwiftUI
 import UIKit
 
 struct SearchBar<Content: View>: UIViewControllerRepresentable {
-    
+
     typealias UIViewControllerType = SearchBarUIViewController<Content>
     
     @Binding var searchQuery: String
     @ViewBuilder var content: () -> Content
     
+    @State var scopeBarItems = ["Apple Music", "Ваша медиатека"]
+    @State var placeholder = "Apple Music"
+    
     func makeCoordinator() -> SearchBar.Coordinator {
-        Coordinator(searchQuery: $searchQuery)
+        Coordinator(searchQuery: $searchQuery,
+                    scopeBarItems: $scopeBarItems,
+                    placeholder: $placeholder)
     }
     
     // MARK: - Conformance to UIViewControllerRepresentable
     func makeUIViewController(context: UIViewControllerRepresentableContext<SearchBar>) -> UIViewControllerType {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = context.coordinator
-        searchController.searchBar.placeholder = "Альбомы"
+        
+        searchController.searchBar.placeholder = placeholder
+        searchController.searchBar.scopeButtonTitles = scopeBarItems
+        
+        searchController.searchBar.delegate = context.coordinator
         
         return SearchBarUIViewController(searchController: searchController, withContent: content())
     }
     
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: UIViewControllerRepresentableContext<SearchBar>) {
+    func updateUIViewController(_ uiViewController: SearchBarUIViewController<Content>, context: UIViewControllerRepresentableContext<SearchBar>) {
+        // MARK: Search controller
+        uiViewController.searchController.searchBar.placeholder = placeholder
+        
+        // MARK: Content Controller
         let contentViewController = uiViewController.contentViewController
         
         contentViewController.view.removeFromSuperview()
@@ -42,14 +55,28 @@ struct SearchBar<Content: View>: UIViewControllerRepresentable {
     class Coordinator: NSObject, UISearchResultsUpdating, UISearchBarDelegate {
         @Binding var searchQuery: String
         
-        init(searchQuery: Binding<String>) {
+        @Binding var scopeBarItems: [String]
+        @Binding var placeholder: String
+        
+        init(searchQuery: Binding<String>,
+             scopeBarItems: Binding<[String]>,
+             placeholder: Binding<String>) {
+            
             _searchQuery = searchQuery
+            _scopeBarItems = scopeBarItems
+            _placeholder = placeholder
         }
         
+        // MARK: - Search Results Update
         func updateSearchResults(for searchController: UISearchController) {
             if self.searchQuery != searchController.searchBar.text {
                 self.searchQuery = searchController.searchBar.text ?? ""
             }
+        }
+        
+        // MARK: - Search Bar Delegate
+        func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+            placeholder = scopeBarItems[selectedScope]
         }
     }
 }

@@ -19,7 +19,6 @@ class SearchBarUIViewController<Content: View>: UIViewController {
         
         setupHierarchy()
         setupView()
-//        setupSearch()
     }
     
     override func didMove(toParent parent: UIViewController?) {
@@ -40,10 +39,6 @@ class SearchBarUIViewController<Content: View>: UIViewController {
     
     func setupView() {
         contentViewController.view.frame = view.bounds
-    }
-    
-    func setupSearch() {
-        searchController.searchBar.placeholder = "Альбомы"
     }
     
     // MARK: - Initializers
