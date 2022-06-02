@@ -12,7 +12,10 @@ struct SearchContainerView: View {
     
     var body: some View {
         ZStack {
-            SearchViewController()
+            NavigationView {
+                SearchViewController()
+                    //.navigationBarTitle("Поиск", displayMode: .large)
+            }
             
             MediaPlayerView(showMediaPlayerDetail: $showMediaPlayerDetail)
         }

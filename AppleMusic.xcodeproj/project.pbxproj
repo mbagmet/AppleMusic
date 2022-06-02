@@ -371,7 +371,6 @@
 		D93B024528480A1000C83F63 /* SearchUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				D93B024728480AC700C83F63 /* SearchViewController.swift */,
 				D93B024628480A4500C83F63 /* Views */,
 			);
 			path = SearchUIKit;
@@ -381,7 +380,9 @@
 			isa = PBXGroup;
 			children = (
 				D93B024B28480E9D00C83F63 /* SearchContainerView.swift */,
-				D93B024928480DF100C83F63 /* SearchUIViewController.swift */,
+				D95AA52D2848BA6D001FDEBF /* SearchBar */,
+				D95AA52E2848BA93001FDEBF /* SearchMainView */,
+				D95AA52F2848BABA001FDEBF /* SearchDetailView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -427,6 +428,29 @@
 				D95735BF2846BE17000CA28D /* AdditionalButtonsView.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D95AA52D2848BA6D001FDEBF /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		D95AA52E2848BA93001FDEBF /* SearchMainView */ = {
+			isa = PBXGroup;
+			children = (
+				D93B024728480AC700C83F63 /* SearchViewController.swift */,
+				D93B024928480DF100C83F63 /* SearchUIViewController.swift */,
+			);
+			path = SearchMainView;
+			sourceTree = "<group>";
+		};
+		D95AA52F2848BABA001FDEBF /* SearchDetailView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchDetailView;
 			sourceTree = "<group>";
 		};
 		D95B5A9F27D7F397003CC7CB /* Horizontal */ = {
