@@ -32,6 +32,34 @@ struct SearchResults: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
+                if searchQuery.isEmpty {
+                    // MARK: - Подсказки
+                    SearchSuggestionsView(searchQuery: $searchQuery)
+                    
+                    // MARK: - Последние результаты поиска
+                    if lastSearchResults != [] {
+                        HStack(alignment: .center) {
+                            Text("Недавние поиски")
+                                .font(.subheadline)
+                                .fontWeight(.bold)
+
+                            Spacer()
+
+                            Button {
+                                lastSearchResults.removeAll()
+                            } label: {
+                                Text("Очистить")
+                                    .font(.footnote)
+                                    .fontWeight(.bold)
+                            }
+
+                        }
+                        .padding(.top, 10)
+
+                        Divider()
+                    }
+                }
+                
                 LazyVGrid(columns: columns) {
                     ForEach(findedStations) { station in
                         Button {
