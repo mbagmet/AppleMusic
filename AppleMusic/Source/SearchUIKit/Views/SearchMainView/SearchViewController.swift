@@ -10,12 +10,14 @@ import UIKit
 
 struct SearchViewController: UIViewControllerRepresentable {
     
+    typealias UIViewControllerType = SearchUIViewController
+    
     // MARK: - Conformance to UIViewControllerRepresentable
-    func makeUIViewController(context: Context) -> UIViewController {
+    func makeUIViewController(context: Context) -> SearchUIViewController {
         return SearchUIViewController()
     }
     
-    func updateUIViewController(_ searchViewController: UIViewController, context: Context) {
+    func updateUIViewController(_ searchViewController: SearchUIViewController, context: Context) {
         // TODO
     }
 }
