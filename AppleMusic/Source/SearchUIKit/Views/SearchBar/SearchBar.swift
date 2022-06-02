@@ -12,6 +12,7 @@ struct SearchBar<Content: View>: UIViewControllerRepresentable {
 
     typealias UIViewControllerType = SearchBarUIViewController<Content>
     
+    @Binding var isSearching: Bool
     @Binding var searchQuery: String
     @ViewBuilder var content: () -> Content
     
@@ -19,7 +20,8 @@ struct SearchBar<Content: View>: UIViewControllerRepresentable {
     @State var placeholder = "Apple Music"
     
     func makeCoordinator() -> SearchBar.Coordinator {
-        Coordinator(searchQuery: $searchQuery,
+        Coordinator(isSearching: $isSearching,
+                    searchQuery: $searchQuery,
                     scopeBarItems: $scopeBarItems,
                     placeholder: $placeholder)
     }
@@ -48,20 +50,22 @@ struct SearchBar<Content: View>: UIViewControllerRepresentable {
         contentViewController.rootView = content()
         uiViewController.view.addSubview(contentViewController.view)
         contentViewController.view.frame = uiViewController.view.bounds
- 
     }
     
     // MARK: - Coordinator -
     class Coordinator: NSObject, UISearchResultsUpdating, UISearchBarDelegate {
+        @Binding var isSearching: Bool
         @Binding var searchQuery: String
         
         @Binding var scopeBarItems: [String]
         @Binding var placeholder: String
         
-        init(searchQuery: Binding<String>,
+        init(isSearching: Binding<Bool>,
+             searchQuery: Binding<String>,
              scopeBarItems: Binding<[String]>,
              placeholder: Binding<String>) {
             
+            _isSearching = isSearching
             _searchQuery = searchQuery
             _scopeBarItems = scopeBarItems
             _placeholder = placeholder
@@ -71,6 +75,12 @@ struct SearchBar<Content: View>: UIViewControllerRepresentable {
         func updateSearchResults(for searchController: UISearchController) {
             if self.searchQuery != searchController.searchBar.text {
                 self.searchQuery = searchController.searchBar.text ?? ""
+            }
+            
+            if searchController.isActive {
+                isSearching = true
+            } else {
+                isSearching = false
             }
         }
         

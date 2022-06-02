@@ -10,24 +10,24 @@ import SwiftUI
 struct SearchContainerView: View {
     @Binding var showMediaPlayerDetail: Bool
     
+    @State var isSearching = false
     @State var searchQuery = ""
     @State var pickerSelection = "music"
     
     var body: some View {
         ZStack {
             NavigationView {
-                ZStack {
-                    SearchBar(searchQuery: $searchQuery) {
+                SearchBar(isSearching: $isSearching, searchQuery: $searchQuery) {
+                    if isSearching {
                         SearchResults(searchQuery: $searchQuery)
+                    } else {
+                        SearchViewController()
+                            .ignoresSafeArea()
                     }
-                    .navigationBarTitle("Поиск", displayMode: .large)
                     
-                    //SearchViewController()
                 }
-                
-                
+                .navigationBarTitle("Поиск", displayMode: .large)
             }
-            
             MediaPlayerView(showMediaPlayerDetail: $showMediaPlayerDetail)
         }
         
