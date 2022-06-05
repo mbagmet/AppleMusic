@@ -4,6 +4,7 @@
         "title": "Лучшая новая музыка",
         "description": "Станция Apple Music",
         "imageName": "radio6",
+        "smallImageName": "radio6_small",
         "isFavorite": true
     },
     {
@@ -11,6 +12,7 @@
         "title": "Классика металла",
         "description": "Станция Apple Music",
         "imageName": "radio1",
+        "smallImageName": "radio1_small",
         "isFavorite": true
     },
     {
@@ -18,6 +20,7 @@
         "title": "Легкий металл-рок",
         "description": "Станция Apple Music",
         "imageName": "radio2",
+        "smallImageName": "radio2_small",
         "isFavorite": true
     },
     {
@@ -25,6 +28,7 @@
         "title": "Иконы гранджа",
         "description": "Станция Apple Music",
         "imageName": "radio3",
+        "smallImageName": "radio3_small",
         "isFavorite": true
     },
     {
@@ -32,6 +36,7 @@
         "title": "Русский рок: главное",
         "description": "Станция Apple Music",
         "imageName": "radio4",
+        "smallImageName": "radio4_small",
         "isFavorite": true
     },
     {
@@ -39,62 +44,71 @@
         "title": "Альтернативный рок",
         "description": "Станция Apple Music",
         "imageName": "radio5",
+        "smallImageName": "radio5_small",
         "isFavorite": true
     },
     {
         "id": 2007,
         "title": "Тренды металла",
         "description": "Станция Apple Music",
-        "imageName": "station1",
+        "imageName": "radio_avril_big",
+        "smallImageName": "station1",
         "isFavorite": false
     },
     {
         "id": 2008,
         "title": "Музыка для тренировки",
         "description": "Станция Apple Music",
-        "imageName": "station2",
+        "imageName": "radio_avril_big",
+        "smallImageName": "station2",
         "isFavorite": false
     },
     {
         "id": 2009,
         "title": "Отрывные выходные",
         "description": "Станция Apple Music",
-        "imageName": "station3",
+        "imageName": "radio_avril_big",
+        "smallImageName": "station3",
         "isFavorite": false
     },
     {
         "id": 2010,
         "title": "Проснись и вой",
         "description": "Станция Apple Music",
-        "imageName": "station4",
+        "imageName": "radio_avril_big",
+        "smallImageName": "station4",
         "isFavorite": false
     },
     {
         "id": 2011,
         "title": "Легкий рок",
         "description": "Станция Apple Music",
-        "imageName": "station5",
+        "imageName": "radio_avril_big",
+        "smallImageName": "station5",
         "isFavorite": false
     },
     {
         "id": 2012,
         "title": "Вторая смена",
         "description": "Станция Apple Music",
-        "imageName": "station6",
+        "imageName": "radio_avril_big",
+        "smallImageName": "station6",
         "isFavorite": false
     },
     {
         "id": 2013,
         "title": "Пульс рока",
         "description": "Станция Apple Music",
-        "imageName": "station7",
+        "imageName": "radio_avril_big",
+        "smallImageName": "station7",
         "isFavorite": false
     },
     {
         "id": 2014,
         "title": "Португальская альтернатива",
         "description": "Станция Apple Music",
-        "imageName": "station8",
+        "imageName": "radio_avril_big",
+        "smallImageName": "station8",
         "isFavorite": false
     }
 ]

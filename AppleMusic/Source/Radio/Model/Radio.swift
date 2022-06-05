@@ -12,5 +12,6 @@ struct Radio: Hashable, Codable, Identifiable {
     var title: String
     var description: String
     var imageName: String
+    var smallImageName: String
     var isFavorite: Bool
 }

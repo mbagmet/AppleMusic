@@ -1,0 +1,82 @@
+[
+    {
+        "id": 4001,
+        "titleDescription": "Новый альбом",
+        "title": "Oochya!",
+        "author": "Stereophonics",
+        "description": "Классический британский рок в 12-м лонгплее уэльской группы.",
+        "imageName": "album1",
+        "smallImageName": "album1_small",
+        "isFeatured": false
+    },
+    {
+        "id": 4002,
+        "titleDescription": "Новая deluxe-версия",
+        "title": "бомберлайн (deluxe edition)",
+        "author": "Земфира",
+        "description": "Переиздание седьмого альбома певицы с бонусными треками.",
+        "imageName": "album2",
+        "smallImageName": "album2_small",
+        "isFeatured": false
+    },
+    {
+        "id": 4003,
+        "titleDescription": "Обновленный плейлист",
+        "title": "Новый рок",
+        "author": "Apple Music Rock",
+        "description": "Нопоминаем: рок-н-ролл живее всех живых.",
+        "imageName": "album3",
+        "smallImageName": "album3_small",
+        "isFeatured": true
+    },
+    {
+        "id": 4004,
+        "titleDescription": "Новый релиз",
+        "title": "Я никому не верю",
+        "author": "Би-2",
+        "description": "Новый сингл рок-группы на стыке синти-попа и дарквейва.",
+        "imageName": "album4",
+        "smallImageName": "album4_small",
+        "isFeatured": true
+    },
+    {
+        "id": 4005,
+        "titleDescription": "Новый EP",
+        "title": "Portals EP",
+        "author": "Kirk Hammet",
+        "description": "Классический тяжелый австралийский рок.",
+        "imageName": "album5",
+        "smallImageName": "album5_small",
+        "isFeatured": true
+    },
+    {
+        "id": 4006,
+        "titleDescription": "Обновленный плейлист",
+        "title": "Проснись и вой",
+        "author": "Apple Music Альтернатива",
+        "description": "Безбашенные и беспощадные альтернативные хиты для бодрости и боевого настроения.",
+        "imageName": "album6",
+        "smallImageName": "album6_small",
+        "isFeatured": true
+    },
+    {
+        "id": 4007,
+        "titleDescription": "Избранное шоу",
+        "title": "Rocket hour",
+        "author": "Элтон Джон",
+        "description": "Поп-легенда и одержимый меломан делится любимой музыкой.",
+        "imageName": "album7",
+        "smallImageName": "album7_small",
+        "isFeatured": true
+    },
+    {
+        "id": 4008,
+        "titleDescription": "Избранный плейлист",
+        "title": "Cosics by Barteese Strange",
+        "author": "4AD",
+        "description": "Here’s a playlist of songs I personally cosign - songs I’ve been spinning daily since they’ve dropped.",
+        "imageName": "album8",
+        "smallImageName": "album8_small",
+        "isFeatured": true
+    }
+]

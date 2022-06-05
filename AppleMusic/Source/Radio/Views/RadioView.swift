@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RadioView: View {
+    @Binding var showMediaPlayerDetail: Bool
+    
     var body: some View {
         ZStack {
             NavigationView {
@@ -22,14 +24,14 @@ struct RadioView: View {
             }
             .navigationViewStyle(.stack)
 
-            MediaPlayerView()
+            MediaPlayerView(showMediaPlayerDetail: $showMediaPlayerDetail)
         }
     }
 }
 
 struct RadioView_Previews: PreviewProvider {
     static var previews: some View {
-        RadioView()
+        RadioView(showMediaPlayerDetail: .constant(false))
             .environmentObject(ModelData())
     }
 }

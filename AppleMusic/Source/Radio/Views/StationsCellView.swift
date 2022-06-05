@@ -9,14 +9,17 @@ import SwiftUI
 
 struct StationsCellView: View {
     @EnvironmentObject var modelData: ModelData
+    
     var station: Radio
+    
+    @State var isSmall = false
 
     var body: some View {
-        HStack(alignment: .top, spacing: 10) {
-            Image(station.imageName)
+        HStack(alignment: .top, spacing: (isSmall ? 5 : 10)) {
+            Image(station.smallImageName)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 100, height: 100)
+                .frame(width: (isSmall ? 50 : 100), height: (isSmall ? 50 : 100))
 
             VStack {
                 HStack {
@@ -37,7 +40,7 @@ struct StationsCellView: View {
                 Divider()
                     .background(Color("dividerGray"))
             }
-            .frame(height: 110)
+            .frame(height: (isSmall ? 60 : 110))
         }
     }
 }
