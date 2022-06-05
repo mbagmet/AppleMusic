@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SearchContainerView: View {
+    @EnvironmentObject var modelData: ModelData
     @Binding var showMediaPlayerDetail: Bool
     
     @State var isSearching = false
@@ -17,18 +18,23 @@ struct SearchContainerView: View {
     var body: some View {
         ZStack {
             NavigationView {
-                SearchBar(isSearching: $isSearching, searchQuery: $searchQuery) {
-                    if isSearching {
-                        SearchResults(searchQuery: $searchQuery)
-                    } else {
-                        SearchViewController()
-                            .ignoresSafeArea()
+                ZStack {           
+                    SearchBar(isSearching: $isSearching, searchQuery: $searchQuery) {
+                        if isSearching {
+                            SearchResults(searchQuery: $searchQuery)
+                        }
                     }
                     
+                    if !isSearching {
+                        SearchMain()
+                    }
                 }
                 .navigationBarTitle("Поиск", displayMode: .large)
             }
-            MediaPlayerView(showMediaPlayerDetail: $showMediaPlayerDetail)
+            
+            if !isSearching {
+                MediaPlayerView(showMediaPlayerDetail: $showMediaPlayerDetail)
+            }
         }
         
     }
@@ -37,5 +43,6 @@ struct SearchContainerView: View {
 struct SearcContainerView_Previews: PreviewProvider {
     static var previews: some View {
         SearchContainerView(showMediaPlayerDetail: .constant(false))
+            .environmentObject(ModelData())
     }
 }
