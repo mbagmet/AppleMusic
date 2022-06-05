@@ -77,11 +77,7 @@ struct SearchBar<Content: View>: UIViewControllerRepresentable {
                 self.searchQuery = searchController.searchBar.text ?? ""
             }
             
-            if searchController.isActive {
-                isSearching = true
-            } else {
-                isSearching = false
-            }
+            isSearching = searchController.isActive
         }
         
         // MARK: - Search Bar Delegate
