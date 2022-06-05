@@ -16,9 +16,4 @@ struct Album: Hashable, Codable, Identifiable {
     var imageName: String
     var smallImageName: String
     var isFeatured: Bool
-    
-//    var category: [Category]
-//    enum Category: String, CaseIterable, Codable {
-//        case
-//    }
 }

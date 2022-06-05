@@ -12,6 +12,7 @@ final class ModelData: ObservableObject {
     @Published var radioItems: [Radio] = load("RadioData.json")
     @Published var searchCategories: [SearchCategory] = load("SearchData.json")
     @Published var albums: [Album] = load("AlbumData.json")
+    @Published var sections: [AlbumSection] = load("AlbumsWithSections.json")
 }
 
 func load<T: Decodable>(_ filename: String) -> T {
