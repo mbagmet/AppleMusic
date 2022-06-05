@@ -34,6 +34,12 @@ struct MainView: View {
                         Image(systemName: "magnifyingglass")
                         Text("Поиск")
                     }
+                
+                SearchContainerView(showMediaPlayerDetail: $showMediaPlayerDetail)
+                    .tabItem {
+                        Image(systemName: "text.magnifyingglass")
+                        Text("UIKit")
+                    }
             }
 
             MediaPlayerDetailView(showMediaPlayerDetail: $showMediaPlayerDetail, dragAmount: $dragAmount)
